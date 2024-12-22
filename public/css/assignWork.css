@@ -9,7 +9,7 @@ body {
   display: flex;
     height: 100vh; /* Full height of the viewport */
     margin-left: 210px; /* ระยะจาก Sidebar */
-    padding: 20px; /* ระยะห่างด้านใน */
+    padding: 20px; 
 }
 
 

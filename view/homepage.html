@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Majestic Horizon</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="/css/homepage.css">
+    <script defer src="/js/homepage.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="/img/logo_Majestic_Horizon.png" alt="Majestic Horizon" class="logo">
+                <span class="logo-text">Majestic Horizon</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/login" id="login-button">เข้าสู่ระบบ</a></li>
+                    <li><a href="/signup" id="signup-button">สร้างบัญชีผู้ใช้</a></li>
+                    <li><a href="/login" id="logout-button" style="display: none;">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        
+            
+            <div class="booking-container">
+                <div class="stay-options">
+                    <button class="stay-type active">Overnight Stays</button>
+                    <button class="stay-type">Day Use Stays</button>
+                </div>
+            
+                <form class="booking-form" method="GET" action="/roomselection">
+                    <!-- Date Picker -->
+                    <div class="form-group">
+                        <section>
+                            <input type="text" id="check-in" name="checkin" class="form-input" placeholder="Select check-in date" readonly required>
+                        </section>
+                        <section>
+                            <input type="text" id="check-out" name="checkout" class="form-input" placeholder="Select check-out date" readonly required>
+                        </section>
+                    </div>
+                    <!-- Submit Button -->
+                    <div class="btn">
+                        <button type="submit" class="search-btn">SEARCH</button>
+                    </div>
+                </form>
+                
+                <!-- Flatpickr Configuration -->
+                <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+                <script>
+                    flatpickr("#check-in", { dateFormat: "Y-m-d", minDate: "today" });
+                    flatpickr("#check-out", { dateFormat: "Y-m-d", minDate: "today" });
+                </script>
+
+                    </div>
+                    <!--div class="guest-selection">
+                        <div class="guest-summary" id="guest-summary">
+                            <label id="summary-text">2 adults, 1 room</label>
+                        </div>
+                        <div class="guest-popup" id="guest-popup">
+                            <div class="guest-row">
+                                <div class="guest-row-info">
+                                    <p class="guest-label">Room</p>
+                                </div>
+                                <div class="guest-controls">
+                                    <button class="guest-btn decrease-btn" data-target="room">−</button>
+                                    <span id="room-count">1</span>
+                                    <button class="guest-btn increase-btn" data-target="room">+</button>
+                                </div>
+                            </div>
+                            <div class="guest-row">
+                                <div class="guest-row-info">
+                                    <p class="guest-label">Adults</p>
+                                    <p class="guest-info">Ages 18 or above</p>
+                                </div>
+                                <div class="guest-controls">
+                                    <button class="guest-btn decrease-btn" data-target="adult">−</button>
+                                    <span id="adult-count">2</span>
+                                    <button class="guest-btn increase-btn" data-target="adult">+</button>
+                                </div>
+                            </div>
+                            <div class="guest-row">
+                                <div class="guest-row-info">
+                                    <p class="guest-label">Children</p>
+                                    <p class="guest-info">Ages 0–17</p>
+                                </div>
+                                <div class="guest-controls">
+                                    <button class="guest-btn decrease-btn" data-target="child">−</button>
+                                    <span id="child-count">0</span>
+                                    <button class="guest-btn increase-btn" data-target="child">+</button>
+                                </div>
+                            </div>
+                            <button class="guest-done-btn" id="guest-done">Done</button>
+                        </div>
+                    </div>
+                    
+                    
+                    < Submit Button >
+                    <div class="btn">
+                        <button type="submit" class="search-btn">SEARCH</button>
+                    </div-->
+                    
+                </form>
+            </div>
+            
+                
+        <div class="services">
+            <h2>services</h2>
+            <div class="services-container">
+                <div class="service-item">
+                    <img src="/img/room.png" alt="บริการห้องพัก">
+                    <p>บริการห้องพัก</p>
+                </div>
+                <div class="service-item">
+                    <img src="/img/breakfast.jpg" alt="บริการอาหารเช้า">
+                    <p>บริการอาหารเช้า</p>
+                </div>
+                <div class="service-item">
+                    <img src="/img/pool.jpg" alt="บริการสระว่ายน้ำ">
+                    <p>บริการสระว่ายน้ำ</p>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2022 MAJESTIC! Horizon HOTEL | 
+                <a href="#">License</a> | 
+                <a href="#">Terms of Use</a> | 
+                <a href="#">Blog</a>
+            </p>
+        </div>
+    </footer>
+    
+</body>
+</html>

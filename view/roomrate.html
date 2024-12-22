@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/roomrate.css">
+    <title>Room</title>
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">
+            <img src="img/logo_Majestic_Horizon.png" alt="Majestic-Horizon-Logo">
+            <span>Majestic Horizon</span>
+        </div>
+        <nav class="user-account"> <!--Section Account-->
+            <button class="account-btn" >
+                <img src="img/Profile _icon.png" alt="account-icon" class="account-icon">MyAccount
+            </button>
+            <!--div class="account-menu">
+                <ul>
+                    <li><a href="/profileview">MyAccount</a></li>
+                    <li><a href="#">MyBooking</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul-->
+            </div>
+        </nav>
+    </header>
+    
+
+    <div class="search-box">
+        <form class="search-form" method="GET" action="#">
+            
+            <!-- รวมไลบรารี Flatpickr -->
+             <link href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.css" rel="stylesheet">
+            <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.js"></script>
+
+            <!-- Check-in Date -->
+            <!--div class="form-group date-group">
+                <label for="check-in">
+                    <i class="icon-calendar"></i>
+                    <input type="text" id="check-in" name="checkin" placeholder="Select date" readonly>
+                </label>
+            </div>
+            
+            <-- Check-out Date >
+            <div class="form-group date-group">
+                <label for="check-out">
+                    <i class="icon-calendar"></i>
+                    <input type="text" id="check-out" name="checkout" placeholder="Select date" readonly>
+                </label>
+            </div-->
+    
+            <!-- Guests and Rooms >
+            <div class="guest-group">
+                <span class="dropdown-toggle">Number Of Guests
+                    <i class="arrow"></i>
+                </span>
+                <div class="guest-option">
+                    <div class="guest-item">
+                        <label>Room(s)</label>
+                        <div>
+                            <button type="button" class="decrease-btn">-</button>
+                            <span class="value">1</span>
+                            <button type="button" class="increase-btn">+</button>
+                        </div>
+                    </div>
+                    <div class="guest-item">
+                        <label>Adult(s)</label>
+                        <div>
+                            <button type="button" class="decrease-btn">-</button>
+                            <span class="value">1</span>
+                            <button type="button" class="increase-btn">+</button>
+                        </div>
+                    </div>
+                    <div class="guest-item">
+                        <label>Child(ren)</label>
+                        <div>
+                            <button type="button" class="decrease-btn">-</button>
+                            <span class="value">0</span>
+                            <button type="button" class="increase-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div-->
+            
+            <!-- Search Button >
+            <button type="submit" class="search-btn">SEARCH</button-->
+        </form>
+    </div>
+
+    <div class="room-container">
+        <!-- จะแสดงข้อมูลห้องว่างตรงนี้ -->
+    </div>
+
+    <div class = "footer">
+        <h3>Majestic Horizon</h3>
+        <hr>
+        <p>82 Rom Klao Rd, Khwaeng Min Buri, Min Buri, Bangkok 10510
+            Telephone: 66 2 5436667-8 Fax: 66 2 543 6668
+            GPS : N 13.8036344948964 / E 100.741175713492 (View Map)
+        </p>
+    </div>
+
+
+    <script src="/js/roomrate.js" defer></script>
+    <script>
+        document.getElementById("myAccount-btn").addEventListener("click", () => {
+            window.location.href = "/profileview"; // เปลี่ยนหน้าไปยังเส้นทาง /profileview
+        });
+        </script>
+</body>
+</html>

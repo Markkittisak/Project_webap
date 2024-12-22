@@ -1,0 +1,467 @@
+/* รีเซ็ตค่าเริ่มต้นของ CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* การตั้งค่าโดยรวมของเว็บไซต์ */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff; /* สีพื้นหลัง */
+}
+
+/* Header */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white; /* สีเขียวของ header */
+    color: #008000;
+    border-bottom: 2px solid #f0f0f0;
+}
+.site-header .logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.site-header .logo img {
+    height: 50px; /* ขนาดโลโก้ */
+    margin-right: 15px;
+}
+
+.site-header .user-action a {
+    color: #008000;
+    text-decoration: none;
+    padding: 8px;
+    margin-left: 15px;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.site-header .user-action a:hover {
+    text-decoration: underline;
+}
+
+.user-account {
+    position: relative;
+}
+
+.account-btn {
+    background-color: #008000;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.account-btn:hover {
+    background-color: #006400;
+}
+
+
+.account-icon {
+    width: 30px;           
+    height: 30px;          
+    border-radius: 50%;   
+    object-fit: cover;     
+}
+
+
+.account-menu {
+    display: none; 
+    position: absolute;
+    top: 50px; 
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    z-index: 100;
+}
+
+.account-menu.active {
+    display: block; 
+}
+
+.account-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.account-menu ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.account-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.account-menu ul li:hover {
+    background-color: #f0f0f0;
+}
+
+.account-menu ul li a:hover {
+    color: #008000;
+}
+
+
+
+
+/* กล่องค้นหา (Search Box) */
+.search-box {
+    background-color: #008000;
+    margin: 0 auto;
+    padding: 15px 25px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เงา */
+}
+
+.search-form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+}
+
+.form-group, .guest-group {
+    
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+}
+
+.date-group input, 
+.guest-group span {
+    font-size: 16px;
+    display: flex;
+    color: #333033;
+    border: none;
+    background: transparent;
+    outline: none;
+    text-align: center;
+}
+
+/* Dropdown สำหรับ Guest */
+.guest-group {
+    position: relative;
+    cursor: pointer;
+}
+/* ลูกศร */
+.arrow {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: solid;
+    border-width: 0 3.5px 3.5px 0;
+    border-color: #008000;
+    margin-left: 10px; /* ระยะห่างจากข้อความ */
+    transform: rotate(45deg); /* ลูกศรชี้ลง */
+    transition: transform 0.3s ease; /* เพิ่มการเคลื่อนไหวเมื่อหมุน */
+}
+
+/* หมุนลูกศรเมื่อ guest-group ถูกคลิก */
+.guest-group.active .arrow {
+    transform: rotate(-135deg); /* หมุนลูกศรให้ชี้ขึ้น */
+}
+
+
+.guest-option {
+    display: none; /* ซ่อนตัวเลือกเริ่มต้น */
+    position: absolute;
+    top: calc(100% + 10px); /* ตำแหน่งด้านล่างของ Guest Group */
+    left: 0;
+    width: 300px; 
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 15px;
+}
+
+
+.guest-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+/*ตัวเลขระหว่างปุ่ม*/
+.guest-item .value {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    width: 40px;
+    margin: 0 5px;
+}
+
+.guest-item button {
+    background: #fff;
+    border: 1px solid #ccc;
+    color: #333;
+    font-size: 16px;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.guest-item button:hover {
+    background: #e0e0e0;
+}
+
+/*Label สำหรับรายการ*/
+.guest-item label {
+    flex: 1;
+    font-size: 14px;
+    color: #666;
+}
+
+.guest-item div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.guest-group.active .guest-option {
+    display: block;
+}
+.guest-option {
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+}
+
+/* ปุ่มค้นหา */
+.search-btn {
+    background-color: #2a9d2a;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #006400; /* สีเขียวเข้ม */
+}
+
+.block-room {
+    border: 2px solid #ddd;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+.room-card {
+    display: flex;
+    justify-content: space-between; /* ให้มีการเว้นระยะระหว่างรูปและเนื้อหา */
+    background: #fff;
+    margin: 20px auto;
+    max-width: 1100px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* ปรับ padding ให้พอดี */
+}
+
+.room-card img {
+    width: 400px; /* ปรับขนาดรูปภาพให้เหมาะสม */
+    height: auto;
+    border-radius: 5px;
+}
+
+.room-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: top; /* จัดข้อความให้อยู่กลาง */
+    flex: 1; /* ใช้พื้นที่ที่เหลืออยู่ */
+    padding: 0 20px; /* เพิ่มระยะห่างระหว่างรูปภาพและข้อความ */
+    margin-top: 500px;
+}
+
+.room-details h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px; /* เว้นระยะห่างข้อความ */
+}
+
+.coin {
+    color: #2a9d2a;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px; /* เว้นระยะห่างก่อนปุ่ม */
+}
+
+.btn-booking {
+    width: 200px;
+    height: 50px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+.btn-booking:hover {
+    background-color: #388E3C; /* สีเมื่อ hover */
+}
+@media (max-width: 768px) {
+    .room-card {
+        flex-direction: column; /* เปลี่ยนจากแนวนอนเป็นแนวตั้ง */
+        align-items: center; /* จัดองค์ประกอบให้อยู่กลาง */
+        padding: 10px; /* ลดระยะห่างภายใน */
+    }
+
+    .room-card img {
+        width: 100%; /* ให้รูปภาพขยายเต็มความกว้าง */
+        max-width: 300px; /* จำกัดขนาดรูปไม่ให้ใหญ่เกินไป */
+        margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่างรูปภาพ */
+    }
+
+    .room-details {
+        text-align: center; /* จัดข้อความกลางจอ */
+        padding: 0; /* ลด padding ด้านข้าง */
+    }
+
+    .btn-booking {
+        width: 100%; /* ปรับปุ่มให้กว้างเต็มพื้นที่ */
+        max-width: 200px; /* จำกัดความกว้างของปุ่ม */
+    }
+}
+
+
+.room-info {
+    background: #fff;
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 40px;
+}
+.room-info h2 {
+    color: #008000;
+}
+
+.room-rate h2 img {
+    width: auto;
+    height: 30px; /* กำหนดขนาดโลโก้ให้พอดีกับข้อความ */
+    object-fit: contain;
+    margin-right: 10px; /* ระยะห่างระหว่างโลโก้และข้อความ */
+}
+
+.rate-info {
+    text-align: left; /* ข้อความราคาอยู่ทางซ้าย */
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: -1px;
+}
+
+.rate-info h4 {
+    font-size: 25px;
+    color: #008000;
+}
+.rate-info ul li {
+    display: flex;
+    align-items: center; /* จัดโลโก้และข้อความให้อยู่ในแนวเดียวกัน */
+    margin-bottom: 10px; /* ระยะห่างระหว่างรายการ */
+}
+
+.rate-info ul li img {
+    width: auto;
+    height: 25px; /* กำหนดขนาดโลโก้ให้พอดีกับข้อความ */
+    object-fit: contain;
+    margin-right: 10px; /* ระยะห่างระหว่างโลโก้และข้อความ */
+}
+
+.price, .price-detail {
+    font-size: 16px; /* ปรับขนาดฟอนต์ให้เหมาะสม */
+}
+
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2a9d2a; /* สีเขียว */
+}
+
+.price-detail {
+    font-size: 14px;
+    color: #777;
+}
+
+.room-controls {
+    display: flex;
+    margin-top: 10px;
+}
+
+.room-controls button {
+    padding: 10px;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.room-controls span {
+    padding: 10px ;
+}
+.room-controls button .value {
+    border-style: none;
+}
+
+.room-controls button:hover {
+    background: #e0e0e0;
+}
+
+.footer {
+    background-color: white; /* สีพื้นหลัง */
+    padding: 30px; /* เพิ่มพื้นที่รอบๆ */
+    width: 80%; /* กำหนดความกว้าง */
+    max-width: 1200px; /* ขนาดสูงสุด */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+    margin: 0 auto; /* จัดให้อยู่กลางในแนวนอน */
+    font-family: 'Roboto', sans-serif; /* ฟอนต์ */
+    margin-top: 40px; /* ระยะห่างจากเนื้อหาด้านบน */
+}
+.footer h3 {
+    color: #008000;
+    text-align: center;
+}
+.footer hr {
+    text-align: center;
+}
+
+
+

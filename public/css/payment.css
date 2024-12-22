@@ -1,0 +1,88 @@
+/* Main Container */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #046A38;
+    margin-bottom: 20px;
+}
+
+/* Center Content */
+#page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* จัดให้อยู่ตรงกลางแกนแนวขวาง */
+    justify-content: center; /* จัดให้อยู่ตรงกลางแกนแนวหลัก */
+    gap: 30px; /* ระยะห่างระหว่างส่วนต่างๆ */
+    max-width: 1000px;
+    margin: 0 auto; /* จัดให้อยู่ตรงกลางหน้าจอ */
+    padding: 20px;
+}
+
+/* Room Details and Payment Form */
+#room-details,
+#payment-form {
+    
+    
+    width: 100%; /* ความกว้าง 100% ของคอนเทนเนอร์หลัก */
+    max-width: 600px; /* จำกัดความกว้างไม่ให้กว้างเกินไป */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left; /* จัดข้อความชิดซ้าย */
+    margin-left: 32%;
+}
+
+#room-image {
+    
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-right:  32%;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #046A38;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #03562e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #room-details,
+    #payment-form {
+        max-width: 100%; /* ปรับให้เต็มจอในมือถือ */
+    }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign Work</title>
+    <link rel="stylesheet" href="/css/assignWork.css">
+    
+
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo">Majestic HORIZON</div>
+        <nav>
+            <ul>
+                <li><a href="/dashboard" >Dashboard</a></li>
+                <li><a href="/dashboard/employeeList" >List of Employees</a></li>
+                <!--li><a href="/dashboard/salary">Salary</a></!--li-->
+                <li><a href="/dashboard/manageAccount">Manage Account</a></li>
+                <li><a href="/dashboard/assignWork"class="active">Assign Work</a></li>
+                <li><a href="/dashboard/booking">booking</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="container">
+      
+
+        <main>
+            <header>
+                <h1>Assign Work</h1>
+                <div class="profile">
+                    <img src="/img/Profile _icon.png" alt="Profile" id="profileIcon">
+                    
+                </div>
+                <div id="profilePopup" class="popup">
+                    <div class="popup-content">
+                        <span id="closePopup" class="close">&times;</span>
+                        <h2>User Profile</h2>
+                        <p><strong>Name:</strong> John Doe</p>
+                        <p><strong>Email:</strong> john.doe@example.com</p>
+                        <p><strong>Role:</strong> Manager</p>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="content">
+                <section class="form-section">
+                    <h2>Assignment Information</h2>
+                    <form>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name">
+                        
+                        <label for="department">Department</label>
+                        <select id="department" name="department">
+                            <option value="" disabled selected>Select</option>
+                            <option value="audit">Audit</option>
+                            <option value="engineering">Engineering</option>
+                            <option value="all">All Departments</option>
+                        </select>
+                        
+                        <label for="details">Assignment Detail</label>
+                        <textarea id="details" name="details"></textarea>
+                        
+                        <label for="file">Assignment File</label>
+                        <input type="file" id="file" name="file">
+                        
+                        <div class="form-actions">
+                            <button type="button" class="save">Save</button>
+                            <button type="reset" class="reset">Reset</button>
+            
+                        </div>
+                        
+                        <label for="due-date">Last Date of Submission</label>
+                        <input type="date" id="due-date" name="due-date">
+                    </form>
+                </section>
+                <section class="history-section">
+                    <h2>History</h2>
+                    <table>
+                      <thead>
+                          <tr>
+                              <th>Name</th>
+                              <th>Status</th>
+                              <th>Date</th>
+                              <th>Department</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <!-- Rows dynamically inserted here -->
+                      </tbody>
+                  </table>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="/js/assignWork.js"></script>
+</body>
+</html>

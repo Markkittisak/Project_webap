@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Account</title>
+    <link rel="stylesheet" href="/css/manageAccount.css">
+    
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">Majestic HORIZON</div>
+            <nav>
+                <ul>
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="/dashboard/employeeList">List of Employee</a></li>
+                    <!--li><a href="/dashboard/salary">Salary</a></!--li-->
+                    <li><a href="/dashboard/manageAccount" class="active">Manage Account</a></li>
+                    <li><a href="/dashboard/assignWork">Assign Work</a></li>
+                    <li><a href="/dashboard/booking">booking</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            
+            <header>
+                <h1>Manage Account</h1>
+                <div class="profile">
+                    <img src="/img/Profile _icon.png" alt="Profile" id="profileIcon">
+                    
+                </div>
+                <div id="profilePopup" class="popup" style="display: none;">
+                    <div class="popup-content">
+                        <span id="closePopup" class="close">&times;</span>
+                        <h2>User Profile</h2>
+                        <p><strong>Name:</strong> Loading...</p>
+                        <p><strong>Email:</strong> Loading...</p>
+                        <p><strong>Phone:</strong> Loading...</p>
+                    </div>
+                </div>
+            </header>
+    
+            <section class="account-management">
+                <!-- Left Panel -->
+                <div class="left-panel">
+                    <!-- Add Account Form -->
+                    <div class="account-form">
+                        <h2>New Account</h2>
+                        <form id="add-account-form">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="example@gmail.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" placeholder="Enter password" required>
+                            </div>                            
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" placeholder="First Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" placeholder="Last Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="text" id="phone" placeholder="(xxx)-xxx-xxxx" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="department">Department</label>
+                                <select id="department" name="department">
+                                    <option value="" disabled selected>Select</option>
+                                    <option value="audit">Audit</option>
+                                    <option value="Resevation">Resevation</option>
+                                    <option value="RD">Room Department</option>
+                                    <option value="it">It</option>
+                                  </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="Role">Role</label>
+                                <select id="Role" name="Role">
+                                    <option value="" disabled selected>Select</option>
+                                    <option value="HD">Head of Department</option>
+                                    <option value="employee">Employee</option>
+                                  </select>
+                            </div>
+                            <div class="btn1">
+                                <button type="submit" class="btn-submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+    
+                    <!-- Delete Account Form -->
+                    <div class="remove-account-form">
+                        <h2>Remove Account</h2>
+                        <form id="remove-account-form" onsubmit="event.preventDefault(); deleteEmployee(document.getElementById('remove-email').value);">
+                            <div class="form-group">
+                                <label for="remove-email">Email</label>
+                                <input type="email" id="remove-email" placeholder="example@gmail.com" required>
+                            </div>
+                            <!-- div class="form-group">
+                                <label for="confirm-delete">Confirmation</label>
+                                <input type="text" id="confirm-delete" placeholder="Type 'I confirm to delete this account'" required>
+                            </div-->
+                            <div class="btn2">
+                                <button type="submit" class="btn-remove">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+    
+                <!-- Right Panel -->
+                <div class="right-panel">
+                    <div class="header-tools">
+                        <h2>List of Accounts</h2>
+                        <div class="search-pagination">
+                            <input type="text" id="search-input" placeholder="Search by name">
+                            <button id="search-btn" class="btn-search">Search</button>
+                        </div>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone Number</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Dynamic content will be inserted here -->
+                        </tbody>
+                    </table>
+                    <div class="pagination">
+                        <button id="prev-btn" class="btn-pagination">Previous</button>
+                        <span id="page-info">Page1of5</span>
+                        <button id="next-btn" class="btn-pagination">Next</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+
+    <script src="/js/manageAcount.js"></script>
+</body>
+</html>

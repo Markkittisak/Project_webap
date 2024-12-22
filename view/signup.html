@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Majestic Horizon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/signup.css"> <!-- เปลี่ยน path ให้ชี้ไปที่ public/css/signup.css -->
+</head>
+<body>
+    <div class="form-container">
+        <a href="/" style="color: #2d2e83; font-size: 16px; margin-bottom: 20px; display: inline-block;">&lt; Back to Homepage</a>
+        <h1>Register</h1>
+        <p>Enter your email and password to Register!</p>
+        <form id="register-form" method="POST" action="/signup">
+            <div class="form-group">
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" placeholder="mail@simmmple.com" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password*</label>
+                <input type="password" id="password" name="password" placeholder="Min. 8 characters" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Re Enter-Password*</label>
+                <input type="password" id="confirm-password" name="confirmPassword" placeholder="Min. 8 characters" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone*</label>
+                <input type="tel" id="phone" name="phone" placeholder="0123456789" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Name*</label>
+                <input type="text" id="name" name="name" placeholder="Nagi" required>
+            </div>
+            <div class="form-group">
+                <label for="lastname">LastName*</label>
+                <input type="text" id="lastname" name="lastname" placeholder="Seishiro" required>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="keep-logged-in" name="keep-logged-in">
+                <label for="keep-logged-in">Keep me logged in</label>
+            </div>
+            <button type="submit" class="submit-btn">Sign In</button>
+        </form>
+        
+        <div class="form-footer">
+            &copy; 2022 MAJESTIC! Horizon HOTEL | <a href="#">License</a> | <a href="#">Terms of Use</a> | <a href="#">Blog</a>
+        </div>
+    </div>
+    <div class="branding-container">
+        <div>
+            <h1>Majestic Horizon</h1>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Management</title>
+    <link rel="stylesheet" href="/css/salary.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+<aside class="sidebar">
+    <div class="logo">Majestic HORIZON</div>
+    <nav>
+        <ul>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/dashboard/employeeList">List of Employees</a></li>
+            <li><a href="/dashboard/salary" class="active">Salary</a></li>
+            <li><a href="/dashboard/manageAccount">Manage Account</a></li>
+            <li><a href="/dashboard/assignWork">Assign Work</a></li>
+            <li><a href="/dashboard/booking">Booking</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<div class="main-content">
+    <div class="container">
+        <h1>Salary Management</h1>
+
+        <!-- Search Section -->
+        <div>
+            <input type="text" id="searchInput" placeholder="Enter Employee ID or Name" />
+            <button onclick="searchEmployee()">Search</button>
+        </div>
+
+        <!-- Employee Information Section -->
+        <div id="employee-info">
+            <h2>Employee Information</h2>
+            <p><strong>Name:</strong> <span id="employeeName"></span></p>
+            <p><strong>Employee ID:</strong> <span id="employeeID"></span></p>
+            <p><strong>Department:</strong> <span id="department"></span></p>
+            <p><strong>Role:</strong> <span id="role"></span></p>
+        </div>
+
+        <!-- Editable Salary Details Section -->
+        <div id="salary-details">
+            <h2>Salary Details</h2>
+            <p><strong>Base Salary:</strong> <input type="number" id="baseSalary" /></p>
+            <p><strong>Bonuses:</strong> <input type="number" id="bonuses" /></p>
+            <p><strong>Deductions:</strong> <input type="number" id="deductions" /></p>
+            <p><strong>Total Compensation:</strong> <span id="totalCompensation"></span></p>
+        </div>
+
+        <!-- Payment Information Section -->
+        <div id="payment-info">
+            <h2>Payment Information</h2>
+            <p><strong>Payment Frequency:</strong> Monthly</p>
+            <p><strong>Payment Method:</strong> Bank Transfer</p>
+            <p><strong>Last Payment Date:</strong> <input type="date" id="lastPaymentDate" /></p>
+            <p><strong>Next Payment Date:</strong> <span id="nextPaymentDate"></span></p>
+        </div>
+
+        <!-- Update Button -->
+        <button onclick="updateEmployeeDetails()">Update</button>
+    </div>
+</div>
+<script src="/js/salary.js"></script>
+
+
+</body>
+</html>

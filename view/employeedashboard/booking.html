@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Checking</title>
+    <link rel="stylesheet" href="/css/employee/booking.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">Majestic HORIZON</div>
+            <nav>
+                <ul>
+                    <!--li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="/dashboard/employeeList">List of Employees</a></li>
+                    <li><a href="/dashboard/salary">Salary</a></!--li>
+                    <li><a href="/dashboard/manageAccount">Manage Account</a></li>
+                    <li><a href="/dashboard/assignWork">Assign Work</a></li-->
+                    <li><a href="/dashboard_employee" class="active">booking</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <div class="main-content">
+            <header>
+                <h1>Booking order</h1>
+                <div class="profile">
+                    <img src="/img/Profile _icon.png" alt="Profile" id="profileIcon">
+                    
+                </div>
+                <div id="profilePopup" class="popup" style="display: none;">
+                    <div class="popup-content">
+                        <span id="closePopup" class="close">&times;</span>
+                        <h2>User Profile</h2>
+                        <p><strong>Name:</strong> Loading...</p>
+                        <p><strong>Email:</strong> Loading...</p>
+                        <p><strong>Phone:</strong> Loading...</p>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content">
+                <h3>Booking Order In Schedule</h3>
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Search">
+                    <button class="search-btn" id="search-button">Search</button>
+
+                </div>
+
+                <!-- Booking Cards -->
+                <div class="booking-container" id="booking-list">
+                    <!-- Cards will be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
+
+       <!-- Detail Popup -->
+    <div id="detail-popup" class="popup hidden">
+        <div class="popup-content">
+            <button id="close-popup" class="close-btn">X</button>
+            <div class="popup-header">
+            <h2>Detail</h2>
+                <img src="/img/Superior King Bed 1.png" alt="Room Image" class="room-image">
+            </div>
+            <form class="popup-form">
+                <label>Booking No :</label>
+                <input type="text" id="popup-booking-no" disabled>
+                
+                <label>Name :</label>
+                <input type="text" id="popup-name" >
+                
+                <label>Email :</label>
+                <input type="text" id="popup-email" disabled>
+                
+                <label>Room Number :</label>
+                <input type="text" id="popup-room-number" disabled>
+
+                <label>Room Type :</label>
+                <input type="text" id="popup-room-type" disabled>
+
+                <label>Price:</label>
+                <input type="text" id="popup-price" disabled>
+                
+                <label>Bed Type :</label>
+                <input type="text" id="popup-bed-type" disabled>
+
+                <label>Check-in — Check-out :</label>
+                <input type="text" id="popup-dates" disabled>
+                
+                <label>Extra Requirement :</label>
+                <textarea id="popup-requirement" disabled></textarea>
+
+                <label>Cleaning Stats :</label>
+                <input type="text" id="popup-clean-status" disabled>
+
+                <div class="popup-buttons">
+                    <button class="btn-submit">Submit</button>
+                    <button class="btn-checkout">Check-out</button>
+                    <button class="btn-checkin">Check-in</button>
+                </div>
+            </form>
+            
+    </div>
+    </div>
+
+
+    </div>
+    <script src="/js/bookingBackend.js"></script>
+</body>
+</html>

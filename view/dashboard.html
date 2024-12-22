@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+                <!-- Sidebar -->
+ <aside class="sidebar">
+    <div class="logo">Majestic HORIZON</div>
+    <nav>
+        <ul>
+            <li><a href="/dashboard" class="active">Dashboard</a></li>
+            <li><a href="/dashboard/employeeList" >List of Employees</a></li>
+            <!--li><a href="/dashboard/salary">Salary</a></!--li-->
+            <li><a href="/dashboard/manageAccount">Manage Account</a></li>
+            <li><a href="/dashboard/assignWork">Assign Work</a></li>
+            <li><a href="/dashboard/booking">booking</a></li>
+        </ul>
+    </nav>
+</aside>   
+    <div class="dashboard-container">
+ 
+          <!-- Main Content -->
+         <main class="main-content">
+            <!-- Header -->
+            <header>
+                <h1>Owner's Dashboard</h1>
+                <div class="profile">
+                    <img src="/img/Profile _icon.png" alt="Profile" id="profileIcon">
+                    
+                </div>
+                <div id="profilePopup" class="popup">
+                    <div class="popup-content">
+                        <span id="closePopup" class="close">&times;</span>
+                        <h2>User Profile</h2>
+                        <p><strong>Name:</strong> John Doe</p>
+                        <p><strong>Email:</strong> john.doe@example.com</p>
+                        <p><strong>Role:</strong> Manager</p>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Summary Cards -->
+            <section class="summary">
+                <div class="card">
+                    <img src="/img/income-icon.png" alt="Income Icon" class="icon">
+                    Income: <span id="income">Loading...</span> THB
+                </div>
+                <div class="card">
+                    <img src="/img/Cost-icon.png" alt="Cost Icon" class="icon">
+                    Cost: <span id="cost">Loading...</span> THB
+                </div>
+                <div class="card">
+                    <img src="/img/Sales-icon.png" alt="Sales Icon" class="icon">
+                    Sales: <span id="sales">Loading...</span> THB
+                </div>
+                <div class="card">
+                    <img src="/img/employee-icon.png" alt="Employee Icon" class="icon">
+                    Total Employees: <span id="totalEmployees">Loading...</span>
+                </div>
+                <div class="card">
+                    <img src="/img/bookings-icon.png" alt="Bookings Icon" class="icon">
+                    Current Bookings: <span id="bookingData">Loading...</span>
+                </div>
+            </section>
+
+            <!-- Charts >
+            <section class="charts">
+                <div id="revenue-chart">
+                    <h2>Weekly Revenue</h2>
+                    <canvas id="weeklyRevenueChart"></canvas>
+                </div>
+            </section-->
+
+            <!-- List of Employees -->
+            <section class="employee-list">
+                <h2>List of Employees</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Department</th>
+                            <th>Role</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Assign Work -->
+            <section class="assign-work">
+                <h2>Assign Work</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                            <th>Department</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- ตารางจะอัปเดตจาก JavaScript -->
+                    </tbody>
+                </table>
+            </section>
+            
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>

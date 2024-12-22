@@ -1,0 +1,117 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background for better contrast */
+}
+
+h1 {
+    color: #008000;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar and Nav Bar Styles */
+.sidebar {
+    height: 100vh; /* Full height */
+    position: fixed; /* Fixed sidebar */
+    top: 0;
+    left: 0;
+    width: 200px; /* Width of sidebar */
+    background-color: #008000; /* Green background */
+ color: white; /* Text color */
+    padding: 20px; /* Padding */
+    overflow-y: auto; /* Scroll if content is too long */
+}
+
+.sidebar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 20px 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s; /* Smooth transition */
+}
+
+.sidebar a:hover {
+    color: #ffcc00; /* Highlight color on hover */
+}
+
+.sidebar a.active {
+    font-weight: bold;
+}
+
+.main-content {
+    margin-left: 270px; /* Space for sidebar */
+    padding: 20px; /* Padding for main content */
+}
+
+h1, h2 {
+    color: #333; /* Darker text for headings */
+}
+
+/* Table Styles */
+table {
+    width: 100%; /* Full width */
+    border-collapse: collapse; /* Collapse borders */
+    margin-top: 20px; /* Space above table */
+}
+
+th, td {
+    padding: 12px; /* Padding for cells */
+    text-align: left; /* Left align text */
+    border-bottom: 1px solid #ddd; /* Light border */
+}
+
+th {
+    background-color: #f2f2f2; /* Light gray background for header */
+}
+
+/* Hover Effect for Table Rows */
+tbody tr:hover {
+    background-color: #e0f7fa; /* Light blue background on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2d2e83; /* Dark blue background */
+    color: white; /* White text */
+    text-align: center; /* Center text */
+    padding: 10px; /* Padding */
+    position: relative; /* Positioning */
+    bottom: 0; /* Stick to bottom */
+    width: 100%; /* Full width */
+}

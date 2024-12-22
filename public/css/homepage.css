@@ -1,0 +1,399 @@
+.main{
+    background-color: #888;
+}
+header {
+    height: 60px; /* ความสูงของ header */
+    background-color: #f9f9f9; /* สีพื้นหลัง */
+    display: flex;
+    align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+    padding: 0 20px; /* ระยะห่างด้านข้าง */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* โลโก้และเมนูอยู่คนละด้าน */
+    align-items: center; /* จัดให้อยู่ตรงกลางในแนวตั้ง */
+    width: 100%;
+}
+
+
+.logo {
+    max-height: 60px; /* จำกัดความสูงของโลโก้ */
+    height: auto;
+    width: auto;
+    color: black;
+}
+/* จัดการ Logo และข้อความ */
+.logo-container {
+    display: flex; /* จัดเรียงในแนวนอน */
+    align-items: center; /* จัดให้อยู่กลางแนวตั้ง */
+    gap: 10px; /* ระยะห่างระหว่างโลโก้และข้อความ */
+}
+
+
+/* สไตล์ข้อความข้างโลโก้ */
+.logo-text {
+    font-size: 20px; /* ขนาดตัวอักษร */
+    font-weight: bold; /* เพิ่มความหนา */
+    color: #333; /* สีข้อความ */
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px; /* ระยะห่างระหว่างลิงก์ */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px; /* ขนาดตัวอักษร */
+    line-height: 1.5; /* ระยะห่างระหว่างบรรทัด */
+}
+
+
+.nav-links a:hover {
+    color: #008000; /* เปลี่ยนสีเมื่อ Hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* เรียงเมนูในแนวตั้ง */
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column; /* เมนูแนวตั้ง */
+        gap: 10px; /* ระยะห่างระหว่างเมนูลดลง */
+    }
+}
+
+
+
+/* Container */
+.booking-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Stay Options Container */
+.stay-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+/* Button Styling */
+.stay-type {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.stay-type:hover {
+    background-color: #008000; /* สีเขียวอ่อน */
+    color: #ffffff; /* สีเขียวเข้ม */
+    transform: scale(1.05); /* ขยายเล็กน้อยเมื่อ hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+}
+
+/* Active State */
+.stay-type.active {
+    background-color: #008000;
+    color: #ffffff;
+    border-color: #008000;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .stay-options {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .stay-type {
+        width: 100%; /* ให้ปุ่มขยายเต็มพื้นที่ */
+        text-align: center;
+    }
+}
+
+/* Form */
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row; /* จัดเรียงในแนวนอน (ค่าเริ่มต้น) */
+    gap: 10px; /* ระยะห่างระหว่าง input */
+    justify-content: center; /* จัดให้อยู่ตรงกลางในแนวนอน */
+    align-items: center; /* จัดให้อยู่ตรงกลางในแนวตั้ง */
+    height: 100%; /* ใช้เพื่อช่วยจัดตำแหน่งแนวตั้ง */
+}
+
+.form-input {
+    flex: none; /* หยุดการขยายอัตโนมัติ */
+    width: 300px; /* กำหนดความกว้างที่ต้องการ */
+    padding: 15px; /* เพิ่มความสูงของ input */
+    font-size: 16px; /* เพิ่มขนาดตัวอักษร */
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box; /* คำนวณขนาดรวม padding */
+}
+
+.form-input:focus {
+    border-color: #008000; /* สีเขียวเมื่อโฟกัส */
+    outline: none;
+}
+
+
+
+
+.guest-selection {
+    display: flex;
+    justify-content: center; /* จัดให้อยู่กึ่งกลางแนวนอน */
+    align-items: center; /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+    width: 100%; /* ความกว้างเต็ม */
+    height: auto; /* กำหนดความสูงอัตโนมัติ หรือระบุค่าคงที่ */
+    position: relative;
+}
+
+
+.guest-summary {
+    padding: 15px; /* ระยะห่างภายใน */
+    margin: 0 auto; /* จัดให้อยู่กึ่งกลางในแนวนอน */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    width: 610px; /* กำหนดความกว้างที่เหมาะสม */
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+
+.guest-summary:hover {
+    border-color: #008000; /* เพิ่มสีขอบเมื่อ hover */
+}
+.guest-popup {
+    position: absolute;
+    top: 100%; /* วาง Popup ด้านล่างของ guest-summary */
+    left: 0;
+    width: 100%; /* ให้มีขนาดเท่ากับ guest-summary */
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+
+.guest-popup {
+    opacity: 0;
+    transform: translateY(-10px);
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.guest-popup.active {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+
+.guest-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.guest-label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.guest-info {
+    font-size: 12px;
+    color: #888;
+}
+
+.guest-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.guest-btn {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    line-height: 30px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+.guest-btn:hover {
+    background-color: #008000;
+    color: #fff;
+    border-color: #008000;
+}
+
+.guest-done-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #008000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.guest-done-btn:hover {
+    background-color: #005700;
+}
+
+/* แสดง Popup เมื่อมีการกด */
+.guest-popup.active {
+    display: block;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+
+}
+
+/* Search Button */
+.search-btn {
+    width: 610px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #008000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-btn:hover {
+    background-color: #006400;
+    transform: scale(1.02);
+}
+
+
+/* Section บริการ */
+.services {
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+    padding: 0px 20px 40px 20px; /* ระยะห่างด้านบนและด้านข้าง */
+    background-color: #ffffff; /* สีพื้นหลัง */
+}
+
+.services h2 {
+    font-size: 28px; /* ขนาดหัวข้อ */
+    font-weight: bold; /* ความหนา */
+    margin-bottom: 20px; /* ระยะห่างระหว่างหัวข้อกับเนื้อหา */
+    color: #333; /* สีตัวอักษร */
+}
+
+/* Container สำหรับรายการบริการ */
+.services-container {
+    display: flex; /* จัดเรียงแบบแนวนอน */
+    justify-content: center; /* จัดให้อยู่ตรงกลาง */
+    gap: 20px; /* ระยะห่างระหว่างรายการ */
+    flex-wrap: wrap; /* ให้ไหลลงแถวใหม่เมื่อหน้าจอเล็ก */
+}
+
+/* แต่ละรายการบริการ */
+.service-item {
+    background-color: #fff; /* พื้นหลังสีขาว */
+    border-radius: 12px; /* มุมโค้ง */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+    width: 250px; /* ความกว้างแต่ละการ์ด */
+    padding: 15px; /* ระยะห่างด้านใน */
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px); /* ยกการ์ดขึ้นเมื่อ Hover */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+}
+
+/* รูปภาพในรายการ */
+.service-item img {
+    max-width: 100%; /* ความกว้างเต็ม */
+    height: auto; /* รักษาสัดส่วน */
+    border-radius: 8px; /* มุมโค้ง */
+    margin-bottom: 10px; /* ระยะห่างจากข้อความ */
+}
+
+/* ข้อความใต้รูป */
+.service-item p {
+    font-size: 16px; /* ขนาดข้อความ */
+    font-weight: bold; /* ความหนาของข้อความ */
+    color: #555; /* สีข้อความ */
+    margin: 0;
+}
+
+footer {
+    background-color: #f9f9f9; /* สีพื้นหลัง */
+    padding: 20px; /* ระยะห่างภายใน */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* เงาเบาๆ ด้านบน */
+    margin-top: 40px; /* ระยะห่างจากเนื้อหาด้านบน */
+}
+
+.footer-container {
+    max-width: 1200px; /* กำหนดความกว้างสูงสุด */
+    margin: 0 auto; /* จัดให้อยู่กึ่งกลาง */
+    font-size: 14px; /* ขนาดฟอนต์ */
+    color: #333; /* สีของข้อความ */
+}
+
+.footer-container a {
+    text-decoration: none; /* เอาเส้นขีดใต้ */
+    color: #008000; /* สีลิงก์ */
+    margin: 0 10px; /* ระยะห่างระหว่างลิงก์ */
+    transition: color 0.3s ease; /* เพิ่มการเปลี่ยนสีเมื่อ hover */
+}
+
+.footer-container a:hover {
+    color: #005700; /* สีเมื่อ hover */
+}
+
+.footer-container p {
+    font-size: 14px;
+    color: #555; /* สีข้อความ */
+    margin: 0;
+}

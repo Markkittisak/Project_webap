@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Employees</title>
+    <link rel="stylesheet" href="/css/employeeList.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">Majestic HORIZON</div>
+            <nav>
+                <ul>
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="/dashboard/employeeList" class="active">List of Employees</a></li>
+                    <!--li><a href="/dashboard/salary">Salary</a></!--li-->
+                    <li><a href="/dashboard/manageAccount">Manage Account</a></li>
+                    <li><a href="/dashboard/assignWork">Assign Work</a></li>
+                    <li><a href="/dashboard/booking">booking</a></li>
+                    
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <header>
+                <h1>List of Employees</h1>
+                <div class="profile">
+                    <img src="/img/Profile _icon.png" alt="Profile" id="profileIcon">
+                    
+                </div>
+                <div id="profilePopup" class="popup">
+                    <div class="popup-content">
+                        <span id="closePopup" class="close">&times;</span>
+                        <h2>User Profile</h2>
+                        <p><strong>Name:</strong> John Doe</p>
+                        <p><strong>Email:</strong> john.doe@example.com</p>
+                        <p><strong>Role:</strong> Manager</p>
+                    </div>
+                </div>
+            </header>
+            
+            <section class="search-bar">
+                <input type="text" id="search-input" placeholder="Search employee by name...">
+                <button id="search-button">Search</button>
+                <button id="Edit" class="btn-edit">Edit</button>
+            </section>
+            
+            <section class="employee-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone Number</th>
+                            <th>Department</th>
+                            <th>Role</th>
+                        </tr>
+                    </thead>
+                   
+                    <tbody>
+                        <!-- Employee data will be added here -->
+                    </tbody>
+                </table>
+            </section>
+           
+            <div class="pagination">
+                <!-- Pagination buttons -->
+               
+            </div>
+            
+        </main>
+    </div>
+    <script src="/js/employeeList.js"></script>
+</body>
+</html>

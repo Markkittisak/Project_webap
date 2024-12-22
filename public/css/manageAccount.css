@@ -1,0 +1,342 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f8;
+    height: 100vh; /* Ensure body takes full height */
+}
+
+.container {
+    display: flex;
+    height: 100vh; /* Full height of the viewport */
+    margin-left: 210px; /* ระยะจาก Sidebar */
+    padding: 20px; /* ระยะห่างด้านใน */
+}
+
+/* Sidebar Styling */
+.sidebar {
+    height: 100vh; /* ความสูงเต็มจอ */
+    position: fixed; /* ให้ Sidebar ติดกับด้านซ้าย */
+    top: 0 ; /* เริ่มต้นจากขอบบน */
+    left: 0; /* ติดขอบซ้าย */
+    width: 200px; /* ความกว้าง Sidebar */
+    background-color: #008000; /* สีพื้นหลัง (สีเขียว) */
+    color: white; /* สีตัวอักษร */
+    padding: 20px; /* ระยะห่างด้านใน */
+    overflow-y: auto; /* หากเนื้อหาเยอะ ให้มี scroll */
+}
+
+.sidebar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    flex-grow: 1;
+}
+
+.sidebar li {
+    margin: 20px 0;
+
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s; /* Smooth transition */
+}
+
+.sidebar a:hover {
+    color: #ffcc00; /* Highlight color on hover */
+}
+
+.sidebar a.active {
+    font-weight: bold;
+}
+
+/* Main Content Styling */
+main {
+    width: calc(100% - 250px);
+    margin-left: 25px;
+    padding: 20px; 
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+  
+header .profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 40px;   /* ย้ายลงมาจากด้านบน 50px */
+    right: 100px; /* ย้ายเข้ามาจากด้านขวา 20px */
+}
+.popup {
+    display: none; /* ซ่อน Popup เริ่มต้น */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+  
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+  
+  
+/* ปุ่มปิด Popup */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+}
+
+/* Account Management Layout */
+.account-management {
+    display: flex;
+    gap: 20px;
+}
+
+/* Left Panel Styling */
+.left-panel {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.account-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.account-form h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Buttons */
+button {
+    width: 43%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn1{
+    display: flex;
+    justify-content: center;
+}
+.btn2{
+    display: flex;
+    justify-content: center;
+}
+.btn1 button {
+    background-color: #0065d1;
+    width: 35%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #f4f6f8;
+}
+
+.btn2 button {
+    background-color: #b30000;
+    width: 35%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #f4f6f8;
+}
+
+.submit-btn {
+    background-color: #0065d1;
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #5783b3;
+}
+
+.remove-btn {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.remove-btn:hover {
+    background-color: #cc0000;
+}
+
+/* Right Panel Styling */
+.right-panel {
+    flex: 3;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.right-panel table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.right-panel th, .right-panel td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.right-panel th {
+    background-color: #008000;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.remove-account-form {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color : #f9f9f9;
+}
+
+.remove-account-form h2 {
+    margin-bottom: 15px;
+}
+
+.remove-account-form .form-group {
+    margin-bottom: 15px;
+    width: 95%;
+}
+
+.remove-account-form .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.remove-account-form .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.remove-account-form .remove-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff4d4d;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.remove-account-form .remove-btn:hover {
+    background-color: #e60000;
+}
+
+.search-pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-pagination input {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-pagination button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #008000;
+    color: white;
+    cursor: pointer;
+}
+.search-pagination button:hover{
+    background-color: #00b400;
+    color: white;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #008000;
+    color: white;
+    cursor: pointer;
+}
+.pagination button :hover{
+    background-color: #008000;
+    color: white;
+}
+.pagination #page-info {
+    margin: 0 10px;
+    font-size: 14px;
+   
+}
+.form-group input{
+    width: 95%;
+}
+
+input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}

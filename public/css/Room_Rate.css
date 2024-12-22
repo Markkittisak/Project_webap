@@ -1,0 +1,204 @@
+/* ตั้งค่าสไตล์พื้นฐานสำหรับหน้าเว็บ */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #2b2b2b;
+}
+
+/* Header Section */
+.site-header {
+    background-color: #046A38;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.site-header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.site-header .logo img {
+    margin-right: 10px;
+    width: 40px;
+    height: auto;
+}
+
+.user-account {
+    position: relative;
+}
+
+.account-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.account-btn img {
+    margin-right: 8px;
+    width: 24px;
+    height: auto;
+}
+
+.account-menu {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 10;
+}
+
+.account-menu.active {
+    display: block;
+}
+
+.account-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.account-menu li {
+    border-bottom: 1px solid #ddd;
+}
+
+.account-menu li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+}
+
+.account-menu li a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Search Form */
+.search-box {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.search-form .form-group input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 200px;
+}
+
+.search-btn {
+    padding: 10px 20px;
+    background-color: #046A38;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.search-btn:hover {
+    background-color: #03562e;
+}
+
+/* Room Container */
+.room-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Room Card */
+.room-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.room-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.room-card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.room-card p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.room-card .price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #046A38;
+    margin: 10px 0;
+}
+
+/* Footer */
+.footer {
+    background-color: #046A38;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}

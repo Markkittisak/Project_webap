@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/payment.css">
+
+    <title>Payment Page</title>
+</head>
+<body>
+    <h1>Payment Page</h1>
+
+    <!-- แสดงข้อมูลห้อง -->
+    <div id="room-details">
+        <img id="room-image" src="" alt="Room Image" style="width: 100%; max-width: 400px;">
+        <p id="room-type"></p>
+        <p id="bed-size"></p>
+        <p id="price"></p>
+    </div>
+
+    <!-- ฟอร์มสำหรับข้อมูลลูกค้า -->
+    <form id="payment-form">
+        <label>Full Name *</label>
+        <input type="text" name="full-name" required readonly><br>
+
+        <label>Email *</label>
+        <input type="email" name="email" required readonly><br>
+
+        <label>Phone *</label>
+        <input type="tel" name="phone" required readonly><br>
+
+        <label>Payment Method *</label>
+        <label><input type="radio" name="payment-method" value="Credit Card"> Credit Card</label>
+        <label><input type="radio" name="payment-method" value="PayPal"> PayPal</label>
+        <label><input type="radio" name="payment-method" value="Bank Transfer"> Bank Transfer</label><br>
+
+        <button type="button" class="confirm-button">Confirm Payment</button>
+    </form>
+
+    <script src="/js/paymentAlgo.js"></script>
+</body>
+</html>
